@@ -19,6 +19,7 @@
 				<h5>Insert solution</h5>
 			</div>
 			<div class="card-body">
+				<h6>Solution by @Model.ClosedBy</h6>
 				<textarea asp-for="Solution" class="form-control" rows="10"></textarea> <br/> <br/>
 				<input asp-for="Progress" type="radio" class="btn-check" name="progress" id="accept" value="2" autocomplete="off" checked>
 				<label class="btn btn-success" for="accept">Accept</label>
@@ -39,7 +40,7 @@
 			<h5>View solution</h5>
 		</div>
 		<div class="card-body">
-			<textarea asp-for="Solution" class="form-control" contenteditable="false" rows="10"></textarea>
+			<textarea asp-for="Solution" class="form-control" rows="10"></textarea>
 		</div>
 	</div>
 } 

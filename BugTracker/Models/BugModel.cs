@@ -1,5 +1,6 @@
 ﻿namespace BugTracker.Models;
 
+
 public class Bug
 {
     public int Id { get; set; }

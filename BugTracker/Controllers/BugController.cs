@@ -63,7 +63,7 @@ public class BugController : Controller
         {
             return NotFound();
         }
-
+        
         bugFromDb.ClosedBy = bug.ClosedBy;
         bugFromDb.Progress = 1;
         bugFromDb.Solution = bug.Solution;
