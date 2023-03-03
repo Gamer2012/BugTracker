@@ -24,6 +24,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[L:/Projects/BugTracker/BugTracker/Views/Bug/BugCloser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVnXEJ1Z0Nsb3Nlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[L:/Projects/BugTracker/BugTracker/Views/Bug/BugCreator.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVnXEJ1Z0NyZWF0b3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[L:/Projects/BugTracker/BugTracker/Views/Bug/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVnXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[L:/Projects/BugTracker/BugTracker/Views/Bug/SolutionViewer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQnVnXFNvbHV0aW9uVmlld2VyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [L:/Projects/BugTracker/BugTracker/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

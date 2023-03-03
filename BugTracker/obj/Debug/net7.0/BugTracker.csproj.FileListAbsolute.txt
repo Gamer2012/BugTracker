@@ -282,3 +282,5 @@ L:\Projects\BugTracker\BugTracker\obj\Debug\net7.0\refint\BugTracker.dll
 L:\Projects\BugTracker\BugTracker\obj\Debug\net7.0\BugTracker.pdb
 L:\Projects\BugTracker\BugTracker\obj\Debug\net7.0\BugTracker.genruntimeconfig.cache
 L:\Projects\BugTracker\BugTracker\obj\Debug\net7.0\ref\BugTracker.dll
+L:\Projects\BugTracker\BugTracker\bin\Debug\net7.0\package-lock.json
+L:\Projects\BugTracker\BugTracker\bin\Debug\net7.0\package.json

@@ -1,0 +1,40 @@
+﻿@model BugTracker.Models.Bug
+
+@{
+	int? id;
+	try
+	{
+		id = Model.Id;
+	}
+	catch
+	{
+		id = null;
+	}
+}
+
+@if (id != null){
+	<form asp-controller="Bug" asp-action="CloseBug">
+		<input type="hidden" asp-for="ClosedBy" value="@User.Identity.Name"/>
+        <input type="hidden" asp-for="Id" value="@id"/>
+		<div class="card">
+			<div class="card-header">
+				<h5>Insert solution</h5>
+			</div>
+			<div class="card-body">
+				<!--
+				<div class="editor">
+					<p>
+						Insert your solution here.
+					</p>
+				</div>
+				-->
+				<textarea asp-for="Solution" class="form-control" rows="10"></textarea>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</div>
+		</div>
+	</form>
+}
+else
+{
+	<h2>You haven't selected a bug to close!</h2>
+}

@@ -1,0 +1,67 @@
+﻿@model BugTracker.Models.Bug;
+
+@{
+    int? id;
+    try
+    {
+        id = Model.Id;
+    }
+    catch
+    {
+        id = null;
+    }
+
+    DateTime? datetime;
+    try
+    {
+        datetime = Model.StartDate;
+    }
+    catch
+    {
+        datetime = null;
+    }
+}
+
+
+
+@if ((id == null && User.Identity.Name != null) || (id != null && User.Identity.Name == Model.OpenedBy))
+{
+    <form asp-controller="bug" asp-action="CreateBug">
+        <div class="card">
+            <div class="card-header">
+                <h5>Create bug report</h5>
+            </div>
+            <div class="card-body">
+                <input type="hidden" asp-for="Id" value="@id"/>
+                <input type="hidden" asp-for="OpenedBy" value="@User.Identity.Name"/>
+                <input asp-for="Name" type="text" class="form-control" placeholder="Name / Title"/> <br/>
+                <textarea asp-for="Description" rows="3" class="form-control" placeholder="Description"></textarea><br/>
+                
+                <div class="input-group">
+                    <!--
+                    <div class="form-check form-check-inline" style="padding-left: 0">
+                        <input asp-for="Progress" type="radio" name="progress" value="0" id="open" class="btn-check" autocomplete="off" checked="checked"/>
+                        <label class="btn btn-secondary" for="open">Open</label> &nbsp;
+                    </div>
+                    -->
+                    <input asp-for="Progress" type="hidden" value="0"/>
+                    @if (datetime == null)
+                    {
+                        <input asp-for="StartDate" type="hidden" class="form-control" value="@DateTime.Now"/>
+                    }
+                    else
+                    {
+                        <input asp-for="StartDate" type="hidden" class="form-control" value="@Model.StartDate"/>
+                    }
+                </div>
+            </div>
+            <div class="card-footer">
+                <button type="submit" class="btn btn-primary">Submit the flesh</button>
+            </div>
+        </div>
+    </form>
+}
+else
+{
+    <h2>You can't edit something you didn't make and you can't create a bug as an anonymous user!</h2>
+}

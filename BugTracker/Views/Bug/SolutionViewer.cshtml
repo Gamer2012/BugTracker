@@ -1,0 +1,50 @@
+﻿@model BugTracker.Models.Bug;
+@{
+	int? id;
+	try
+	{
+		id = Model.Id;
+	}
+	catch
+	{
+		id = null;
+	}
+}
+
+@if (id != null && Model.Progress != 2){
+	<form asp-controller="Bug" asp-action="HandleSolution">
+        <input type="hidden" asp-for="Id" value="@id"/>
+		<div class="card">
+			<div class="card-header">
+				<h5>Insert solution</h5>
+			</div>
+			<div class="card-body">
+				<textarea asp-for="Solution" class="form-control" rows="10"></textarea> <br/> <br/>
+				<input asp-for="Progress" type="radio" class="btn-check" name="progress" id="accept" value="2" autocomplete="off" checked>
+				<label class="btn btn-success" for="accept">Accept</label>
+				<input asp-for="Progress" type="radio" class="btn-check" name="progress" id="reject" value="0" autocomplete="off">
+				<label class="btn btn-danger" for="reject">Reject</label>
+			</div>
+			<div class="card-footer">
+				<button type="submit" class="btn btn-success">Submit</button>
+			</div>
+		</div>
+	</form>
+	
+}
+@if (Model.Progress == 2)
+{
+	<div class="card">
+		<div class="card-header">
+			<h5>View solution</h5>
+		</div>
+		<div class="card-body">
+			<textarea asp-for="Solution" class="form-control" contenteditable="false" rows="10"></textarea>
+		</div>
+	</div>
+} 
+
+@if (id == null) 
+{
+<h2>You haven't selected a bug to close!</h2>
+}

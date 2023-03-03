@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using BugTracker.Models;
 
 namespace BugTracker.Areas.Identity.Data;
 
 public class BugTrackerIdentityDbContext : IdentityDbContext<IdentityUser>
 {
+    public DbSet<Bug> Bugs { get; set; }
     public BugTrackerIdentityDbContext(DbContextOptions<BugTrackerIdentityDbContext> options)
         : base(options)
     {

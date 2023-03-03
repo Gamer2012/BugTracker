@@ -1,0 +1,9 @@
+{
+  "name": "BugTracker",
+  "version": "1.0.0",
+  "dependencies": {
+    "@ckeditor/ckeditor5-code-block": "^36.0.1",
+    "@ckeditor/ckeditor5-editor-classic": "^36.0.1",
+    "ckeditor5-code-block": "^1.0.11"
+  }
+}
